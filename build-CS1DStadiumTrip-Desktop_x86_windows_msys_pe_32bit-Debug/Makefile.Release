@@ -53,14 +53,13 @@ OBJECTS_DIR   = release
 SOURCES       = "..\CS1D Project 2\admin.cpp" \
 		"..\CS1D Project 2\dbmanager.cpp" \
 		"..\CS1D Project 2\main.cpp" \
-		"..\CS1D Project 2\mainwindow.cpp" release\qrc_Resource_Files.cpp \
-		release\moc_admin.cpp \
+		"..\CS1D Project 2\mainwindow.cpp" release\moc_admin.cpp \
 		release\moc_mainwindow.cpp
-OBJECTS       = release/admin.o \
+OBJECTS       = release/qrc_Resource_Files.o \
+		release/admin.o \
 		release/dbmanager.o \
 		release/main.o \
 		release/mainwindow.o \
-		release/qrc_Resource_Files.o \
 		release/moc_admin.o \
 		release/moc_mainwindow.o
 
@@ -92,7 +91,7 @@ dist:
 	$(ZIP) CS1DStadiumTrip.zip $(SOURCES) $(DIST) "..\CS1D Project 2\CS1DStadiumTrip.pro" E:\Qt\5.14.2\mingw73_32\mkspecs\features\spec_pre.prf E:\Qt\5.14.2\mingw73_32\mkspecs\qdevice.pri E:\Qt\5.14.2\mingw73_32\mkspecs\features\device_config.prf E:\Qt\5.14.2\mingw73_32\mkspecs\common\sanitize.conf E:\Qt\5.14.2\mingw73_32\mkspecs\common\gcc-base.conf E:\Qt\5.14.2\mingw73_32\mkspecs\common\g++-base.conf E:\Qt\5.14.2\mingw73_32\mkspecs\common\angle.conf E:\Qt\5.14.2\mingw73_32\mkspecs\features\win32\windows_vulkan_sdk.prf E:\Qt\5.14.2\mingw73_32\mkspecs\common\windows-vulkan.conf E:\Qt\5.14.2\mingw73_32\mkspecs\common\g++-win32.conf E:\Qt\5.14.2\mingw73_32\mkspecs\common\windows-desktop.conf E:\Qt\5.14.2\mingw73_32\mkspecs\qconfig.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3danimation.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3danimation_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dcore.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dcore_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dextras.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dextras_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dinput.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dinput_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dlogic.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dlogic_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquick.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquick_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickanimation.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickanimation_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickextras.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickextras_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickinput.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickinput_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickrender.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickrender_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickscene2d.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3dquickscene2d_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3drender.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_3drender_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_accessibility_support_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_axbase.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_axbase_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_axcontainer.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_axcontainer_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_axserver.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_axserver_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_bluetooth.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_bluetooth_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_bodymovin_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_bootstrap_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_charts.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_charts_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_concurrent.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_concurrent_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_core.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_core_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_datavisualization.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_datavisualization_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_dbus.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_dbus_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_designer.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_designer_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_designercomponents_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_devicediscovery_support_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_edid_support_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_egl_support_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_fb_support_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_fontdatabase_support_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_gamepad.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_gamepad_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_gui.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_gui_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_help.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_help_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_location.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_location_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_multimedia.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_multimedia_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_multimediawidgets.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_network.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_network_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_networkauth.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_networkauth_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_nfc.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_nfc_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_opengl.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_opengl_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_openglextensions.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_openglextensions_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_packetprotocol_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_platformcompositor_support_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_positioning.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_positioning_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_positioningquick.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_positioningquick_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_printsupport.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_printsupport_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_purchasing.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_purchasing_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qml.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qml_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmldebug_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmldevtools_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmlmodels.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmlmodels_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmltest.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmltest_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmlworkerscript.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qmlworkerscript_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick3d.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick3d_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick3dassetimport.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick3dassetimport_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick3drender.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick3drender_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick3druntimerender.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick3druntimerender_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick3dutils.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick3dutils_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quick_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quickcontrols2.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quickcontrols2_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quickparticles_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quickshapes_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quicktemplates2.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quicktemplates2_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quickwidgets.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_quickwidgets_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_remoteobjects.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_remoteobjects_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_repparser.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_repparser_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_script.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_script_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_scripttools.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_scripttools_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_scxml.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_scxml_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_sensors.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_sensors_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_serialbus.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_serialbus_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_serialport.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_serialport_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_sql.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_sql_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_svg.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_svg_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_testlib.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_testlib_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_texttospeech.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_texttospeech_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_theme_support_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_uiplugin.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_uitools.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_uitools_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_virtualkeyboard.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_virtualkeyboard_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_webchannel.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_webchannel_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_websockets.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_websockets_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_widgets.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_widgets_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_windowsuiautomation_support_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_winextras.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_winextras_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_xml.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_xml_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_xmlpatterns.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\modules\qt_lib_zlib_private.pri E:\Qt\5.14.2\mingw73_32\mkspecs\features\qt_functions.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\qt_config.prf E:\Qt\5.14.2\mingw73_32\mkspecs\win32-g++\qmake.conf E:\Qt\5.14.2\mingw73_32\mkspecs\features\spec_post.prf .qmake.stash E:\Qt\5.14.2\mingw73_32\mkspecs\features\exclusive_builds.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\toolchain.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\default_pre.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\win32\default_pre.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\resolve_config.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\exclusive_builds_post.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\default_post.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\build_pass.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\qml_debug.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\precompile_header.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\warn_on.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\qt.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\resources_functions.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\resources.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\moc.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\win32\opengl.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\uic.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\qmake_use.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\file_copies.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\win32\windows.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\testcase_targets.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\exceptions.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\yacc.prf E:\Qt\5.14.2\mingw73_32\mkspecs\features\lex.prf "..\CS1D Project 2\CS1DStadiumTrip.pro" "..\CS1D Project 2\Resource_Files.qrc" E:\Qt\5.14.2\mingw73_32\lib\Qt5Widgets.prl E:\Qt\5.14.2\mingw73_32\lib\Qt5Gui.prl E:\Qt\5.14.2\mingw73_32\lib\Qt5Sql.prl E:\Qt\5.14.2\mingw73_32\lib\Qt5Core.prl E:\Qt\5.14.2\mingw73_32\lib\qtmain.prl   "..\CS1D Project 2\Resource_Files.qrc" E:\Qt\5.14.2\mingw73_32\mkspecs\features\data\dummy.cpp "..\CS1D Project 2\admin.h" "..\CS1D Project 2\dbmanager.h" "..\CS1D Project 2\mainwindow.h"  "..\CS1D Project 2\admin.cpp" "..\CS1D Project 2\dbmanager.cpp" "..\CS1D Project 2\main.cpp" "..\CS1D Project 2\mainwindow.cpp" "..\CS1D Project 2\admin.ui" "..\CS1D Project 2\mainwindow.ui"    
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\admin.o release\dbmanager.o release\main.o release\mainwindow.o release\qrc_Resource_Files.o release\moc_admin.o release\moc_mainwindow.o
+	-$(DEL_FILE) release\qrc_Resource_Files.o release\admin.o release\dbmanager.o release\main.o release\mainwindow.o release\moc_admin.o release\moc_mainwindow.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -109,26 +108,45 @@ benchmark: first
 
 compiler_no_pch_compiler_make_all:
 compiler_no_pch_compiler_clean:
-compiler_rcc_make_all: release/qrc_Resource_Files.cpp
+compiler_rcc_make_all: release/qrc_Resource_Files.o
 compiler_rcc_clean:
-	-$(DEL_FILE) release\qrc_Resource_Files.cpp
-release/qrc_Resource_Files.cpp: ../CS1D\ Project\ 2/Resource_Files.qrc \
+	-$(DEL_FILE) release\qrc_Resource_Files.cpp release\qrc_Resource_Files.tmp.o
+release/qrc_Resource_Files.o: ../CS1D\ Project\ 2/Resource_Files.qrc \
 		E:/Qt/5.14.2/mingw73_32/bin/rcc.exe \
 		../CS1D\ Project\ 2/MainWindow_Logo.png \
-		../CS1D\ Project\ 2/College\ Images/UCLA.jpg \
-		../CS1D\ Project\ 2/College\ Images/University\ of\ Michigan.jpg \
-		../CS1D\ Project\ 2/College\ Images/MIT.jpg \
-		../CS1D\ Project\ 2/College\ Images/University\ of\ Oregon.jpg \
-		../CS1D\ Project\ 2/College\ Images/Saddleback\ college.jpg \
-		../CS1D\ Project\ 2/College\ Images/Cal\ state\ fullerton.jpg \
-		../CS1D\ Project\ 2/College\ Images/UCI.jpg \
-		../CS1D\ Project\ 2/College\ Images/University\ of\ the\ Pacific.jpg \
-		../CS1D\ Project\ 2/College\ Images/University\ of\ Wisconsin.jpg \
-		../CS1D\ Project\ 2/College\ Images/Ohio\ state.jpg \
-		../CS1D\ Project\ 2/College\ Images/Arizona\ state.jpg \
-		../CS1D\ Project\ 2/College\ Images/University\ of\ Texas.jpg \
-		../CS1D\ Project\ 2/College\ Images/Northwestern.jpg
-	E:\Qt\5.14.2\mingw73_32\bin\rcc.exe -name Resource_Files "..\CS1D Project 2\Resource_Files.qrc" -o release\qrc_Resource_Files.cpp
+		../CS1D\ Project\ 2/Stadium\ Images/Target\ Field.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Citizens\ Bank\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Yankee\ Stadium.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Citi\ Field.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Oracle\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Chase\ Field.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Truist\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Dodger\ Stadium.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Petco\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Fenway\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Progressive\ Field.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Nationals\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Minute\ Maid\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Marlins\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Kauffman\ Stadium.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Oakland\ Coliseum.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Oriole\ Park\ at\ Camden\ Yards.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Wrigley\ field.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Miller\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Angel\ Stadium.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Rogers\ Centre.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Comerica\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Busch\ Stadium.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Great\ American\ Ball\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/PNC\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Guaranteed\ Rate\ Field.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Globe\ Life\ Field.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Tropicana\ Field.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/T-mobile\ Park.jpg \
+		../CS1D\ Project\ 2/Stadium\ Images/Coors\ Field.jpg
+	E:\Qt\5.14.2\mingw73_32\bin\rcc.exe -name Resource_Files "..\CS1D Project 2\Resource_Files.qrc" -pass 1 -o release/qrc_Resource_Files.cpp 
+	 g++ $(CXXFLAGS) -c release/qrc_Resource_Files.cpp -o release/qrc_Resource_Files.tmp.o 
+	 E:\Qt\5.14.2\mingw73_32\bin\rcc.exe -name Resource_Files "..\CS1D Project 2\Resource_Files.qrc" -pass 2 -temp release/qrc_Resource_Files.tmp.o -o release\qrc_Resource_Files.o
 
 compiler_moc_predefs_make_all: release/moc_predefs.h
 compiler_moc_predefs_clean:
@@ -1573,9 +1591,6 @@ release/mainwindow.o: ../CS1D\ Project\ 2/mainwindow.cpp ../CS1D\ Project\ 2/mai
 		E:/Qt/5.14.2/mingw73_32/include/QtGui/qdesktopservices.h \
 		E:/Qt/5.14.2/mingw73_32/include/QtCore/QUrl
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o "..\CS1D Project 2\mainwindow.cpp"
-
-release/qrc_Resource_Files.o: release/qrc_Resource_Files.cpp 
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\qrc_Resource_Files.o release\qrc_Resource_Files.cpp
 
 release/moc_admin.o: release/moc_admin.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\moc_admin.o release\moc_admin.cpp

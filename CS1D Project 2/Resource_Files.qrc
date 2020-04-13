@@ -1,18 +1,35 @@
 <RCC>
     <qresource prefix="/Images">
         <file>MainWindow_Logo.png</file>
-        <file>College Images/Arizona state.jpg</file>
-        <file>College Images/Cal state fullerton.jpg</file>
-        <file>College Images/MIT.jpg</file>
-        <file>College Images/Northwestern.jpg</file>
-        <file>College Images/Ohio state.jpg</file>
-        <file>College Images/Saddleback college.jpg</file>
-        <file>College Images/UCI.jpg</file>
-        <file>College Images/UCLA.jpg</file>
-        <file>College Images/University of Michigan.jpg</file>
-        <file>College Images/University of Oregon.jpg</file>
-        <file>College Images/University of Texas.jpg</file>
-        <file>College Images/University of the Pacific.jpg</file>
-        <file>College Images/University of Wisconsin.jpg</file>
+        <file>Stadium Images/Angel Stadium.jpg</file>
+        <file>Stadium Images/Busch Stadium.jpg</file>
+        <file>Stadium Images/Chase Field.jpg</file>
+        <file>Stadium Images/Citi Field.jpg</file>
+        <file>Stadium Images/Citizens Bank Park.jpg</file>
+        <file>Stadium Images/Comerica Park.jpg</file>
+        <file>Stadium Images/Coors Field.jpg</file>
+        <file>Stadium Images/Dodger Stadium.jpg</file>
+        <file>Stadium Images/Fenway Park.jpg</file>
+        <file>Stadium Images/Globe Life Field.jpg</file>
+        <file>Stadium Images/Great American Ball Park.jpg</file>
+        <file>Stadium Images/Guaranteed Rate Field.jpg</file>
+        <file>Stadium Images/Kauffman Stadium.jpg</file>
+        <file>Stadium Images/Marlins Park.jpg</file>
+        <file>Stadium Images/Miller Park.jpg</file>
+        <file>Stadium Images/Minute Maid Park.jpg</file>
+        <file>Stadium Images/Nationals Park.jpg</file>
+        <file>Stadium Images/Oakland Coliseum.jpg</file>
+        <file>Stadium Images/Oracle Park.jpg</file>
+        <file>Stadium Images/Oriole Park at Camden Yards.jpg</file>
+        <file>Stadium Images/Petco Park.jpg</file>
+        <file>Stadium Images/PNC Park.jpg</file>
+        <file>Stadium Images/Progressive Field.jpg</file>
+        <file>Stadium Images/Rogers Centre.jpg</file>
+        <file>Stadium Images/T-mobile Park.jpg</file>
+        <file>Stadium Images/Target Field.jpg</file>
+        <file>Stadium Images/Tropicana Field.jpg</file>
+        <file>Stadium Images/Truist Park.jpg</file>
+        <file>Stadium Images/Wrigley field.jpg</file>
+        <file>Stadium Images/Yankee Stadium.jpg</file>
     </qresource>
 </RCC>

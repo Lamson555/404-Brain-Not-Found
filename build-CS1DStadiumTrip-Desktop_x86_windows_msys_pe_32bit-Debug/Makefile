@@ -247,6 +247,7 @@ Makefile: ../CS1D\ Project\ 2/CS1DStadiumTrip.pro E:/Qt/5.14.2/mingw73_32/mkspec
 		E:/Qt/5.14.2/mingw73_32/mkspecs/features/qt_config.prf \
 		E:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++/qmake.conf \
 		E:/Qt/5.14.2/mingw73_32/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		E:/Qt/5.14.2/mingw73_32/mkspecs/features/exclusive_builds.prf \
 		E:/Qt/5.14.2/mingw73_32/mkspecs/features/toolchain.prf \
 		E:/Qt/5.14.2/mingw73_32/mkspecs/features/default_pre.prf \
@@ -276,7 +277,6 @@ Makefile: ../CS1D\ Project\ 2/CS1DStadiumTrip.pro E:/Qt/5.14.2/mingw73_32/mkspec
 		E:/Qt/5.14.2/mingw73_32/lib/Qt5Sql.prl \
 		E:/Qt/5.14.2/mingw73_32/lib/Qt5Core.prl \
 		E:/Qt/5.14.2/mingw73_32/lib/qtmain.prl \
-		.qmake.stash \
 		E:/Qt/5.14.2/mingw73_32/mkspecs/features/build_pass.prf \
 		../CS1D\ Project\ 2/Resource_Files.qrc
 	$(QMAKE) -o Makefile "..\CS1D Project 2\CS1DStadiumTrip.pro" -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -457,6 +457,7 @@ E:/Qt/5.14.2/mingw73_32/mkspecs/features/qt_functions.prf:
 E:/Qt/5.14.2/mingw73_32/mkspecs/features/qt_config.prf:
 E:/Qt/5.14.2/mingw73_32/mkspecs/win32-g++/qmake.conf:
 E:/Qt/5.14.2/mingw73_32/mkspecs/features/spec_post.prf:
+.qmake.stash:
 E:/Qt/5.14.2/mingw73_32/mkspecs/features/exclusive_builds.prf:
 E:/Qt/5.14.2/mingw73_32/mkspecs/features/toolchain.prf:
 E:/Qt/5.14.2/mingw73_32/mkspecs/features/default_pre.prf:
@@ -486,7 +487,6 @@ E:/Qt/5.14.2/mingw73_32/lib/Qt5Gui.prl:
 E:/Qt/5.14.2/mingw73_32/lib/Qt5Sql.prl:
 E:/Qt/5.14.2/mingw73_32/lib/Qt5Core.prl:
 E:/Qt/5.14.2/mingw73_32/lib/qtmain.prl:
-.qmake.stash:
 E:/Qt/5.14.2/mingw73_32/mkspecs/features/build_pass.prf:
 ../CS1D\ Project\ 2/Resource_Files.qrc:
 qmake: FORCE
