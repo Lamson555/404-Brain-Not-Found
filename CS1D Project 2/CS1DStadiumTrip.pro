@@ -38,3 +38,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     Resource_Files.qrc
 
+UI_DIR = $$PWD
