@@ -27,48 +27,48 @@ MainWindow::~MainWindow()
 }
 
 // GetPicturePath() - Gets college picture path depending on the college passed in
-QString MainWindow::GetPicturePath(QString collegeName)
+QString MainWindow::GetPicturePath(QString STADIUM_NAME)
 {
     // PROCESSING - Sets pixel depending on what college the first college is
     QString picturePath;
 
-    if(collegeName == "Arizona State University") {
+    if(STADIUM_NAME == "Arizona State University") {
        picturePath = ":/Images/College Images/Arizona state.jpg";
     }
-    else if(collegeName == "Massachusetts Institute of Technology (MIT)") {
+    else if(STADIUM_NAME == "Massachusetts Institute of Technology (MIT)") {
        picturePath = ":/Images/College Images/MIT.jpg";
     }
-    else if(collegeName == "Northwestern") {
+    else if(STADIUM_NAME == "Northwestern") {
        picturePath = ":/Images/College Images/Northwestern.jpg";
     }
-    else if(collegeName == "Ohio State University") {
+    else if(STADIUM_NAME == "Ohio State University") {
        picturePath = ":/Images/College Images/Ohio state.jpg";
     }
-    else if(collegeName == "Saddleback College") {
+    else if(STADIUM_NAME == "Saddleback College") {
        picturePath = ":/Images/College Images/Saddleback college.jpg";
     }
-    else if(collegeName == "University of  Michigan") {
+    else if(STADIUM_NAME == "University of  Michigan") {
        picturePath = ":/Images/College Images/University of Michigan.jpg";
     }
-    else if(collegeName == "University of California, Irvine (UCI)") {
+    else if(STADIUM_NAME == "University of California, Irvine (UCI)") {
        picturePath = ":/Images/College Images/UCI.jpg";
     }
-    else if(collegeName == "University of California, Los Angeles (UCLA)") {
+    else if(STADIUM_NAME == "University of California, Los Angeles (UCLA)") {
        picturePath = ":/Images/College Images/UCLA.jpg";
     }
-    else if(collegeName == "University of Oregon") {
+    else if(STADIUM_NAME == "University of Oregon") {
        picturePath = ":/Images/College Images/University of Oregon.jpg";
     }
-    else if(collegeName == "University of Wisconsin") {
+    else if(STADIUM_NAME == "University of Wisconsin") {
        picturePath = ":/Images/College Images/University of Wisconsin.jpg";
     }
-    else if(collegeName == "University of the Pacific") {
+    else if(STADIUM_NAME == "University of the Pacific") {
        picturePath = ":/Images/College Images/University of the Pacific.jpg";
     }
-    else if(collegeName == "California State University, Fullerton") {
+    else if(STADIUM_NAME == "California State University, Fullerton") {
        picturePath = ":/Images/College Images/Cal state fullerton.jpg";
     }
-    else if(collegeName == "University of Texas") {
+    else if(STADIUM_NAME == "University of Texas") {
        picturePath = ":/Images/College Images/University of Texas.jpg";
     }
     return picturePath;
@@ -471,7 +471,7 @@ void MainWindow::on_SortingComboBox_currentIndexChanged(const QString &arg1)
         if(SortBy == "Total Capacity")
         {
             qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
-                        " FROM STADIUM WHERE ORDER BY SEATING_CAP");
+                        " FROM STADIUM ORDER BY SEATING_CAP");
         }
         if(SortBy == "Center Field Distance (Greatest)")
         {
