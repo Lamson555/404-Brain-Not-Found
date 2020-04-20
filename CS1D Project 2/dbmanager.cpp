@@ -49,7 +49,7 @@ QSqlQueryModel *DBManager::loadSouvenirs()
     QSqlQueryModel* model = new QSqlQueryModel();
 
     QSqlQuery qry;
-    qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE FROM SOUVENIRS");
+    qry.prepare("SELECT TEAM, SOUVENIR, PRICE FROM SOUVENIRS");
 
     if(!qry.exec())
     {
