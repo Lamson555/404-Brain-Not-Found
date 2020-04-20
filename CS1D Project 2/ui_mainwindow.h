@@ -153,7 +153,7 @@ public:
         MainMenu->setObjectName(QString::fromUtf8("MainMenu"));
         layoutWidget = new QWidget(MainMenu);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(580, 320, 212, 100));
+        layoutWidget->setGeometry(QRect(1170, 260, 212, 100));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -174,7 +174,7 @@ public:
 
         layoutWidget_2 = new QWidget(MainMenu);
         layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(580, 120, 251, 171));
+        layoutWidget_2->setGeometry(QRect(1170, 60, 251, 171));
         gridLayout = new QGridLayout(layoutWidget_2);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
@@ -229,7 +229,7 @@ public:
 
         layoutWidget_3 = new QWidget(MainMenu);
         layoutWidget_3->setObjectName(QString::fromUtf8("layoutWidget_3"));
-        layoutWidget_3->setGeometry(QRect(30, 60, 511, 481));
+        layoutWidget_3->setGeometry(QRect(30, 60, 1121, 481));
         verticalLayout_2 = new QVBoxLayout(layoutWidget_3);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -377,7 +377,7 @@ public:
         CustomTripMenu->setObjectName(QString::fromUtf8("CustomTripMenu"));
         layoutWidget1 = new QWidget(CustomTripMenu);
         layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(390, 70, 431, 501));
+        layoutWidget1->setGeometry(QRect(390, 70, 531, 501));
         verticalLayout_12 = new QVBoxLayout(layoutWidget1);
         verticalLayout_12->setObjectName(QString::fromUtf8("verticalLayout_12"));
         verticalLayout_12->setContentsMargins(0, 0, 0, 0);
@@ -708,7 +708,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(4);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
