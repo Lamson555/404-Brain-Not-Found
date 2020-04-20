@@ -232,7 +232,7 @@ void MainWindow::on_clearPushBtn_2_clicked()
 void MainWindow::on_DisplayCampusInfo_clicked()
 {
     //showTable(databaseObj.loadCampusInfo());
-    ui->tableView->setModel(databaseObj.loadCampusInfo());
+    ui->tableView->setModel(databaseObj.loadStadiumInfo());
     ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }
 
@@ -250,22 +250,241 @@ void MainWindow::on_StartTour_clicked()
 
     //----------------------------PLANNING PAGE CODE-----------------------------------------//
 
-void MainWindow::on_SelectStartingCollegeButton_clicked()
+void MainWindow::on_SelectStartingTeamButton_clicked()
 {
-    ui->StartingCollegeComboBox->setModel(databaseObj.loadStartingCollegeList());
-    ui->DistancesTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-}
+    QString SelectedTeam = ui->StartingTeamComboBox->currentText();
 
-void MainWindow::on_StartingCollegeComboBox_currentIndexChanged(const QString &arg1)
-{
-    QString SelectedCollege = ui->StartingCollegeComboBox->currentText();
-
-    qDebug() << SelectedCollege;
+    qDebug() << SelectedTeam;
 
     QSqlQueryModel* model = new QSqlQueryModel();
 
     QSqlQuery qry;
-    qry.prepare("SELECT startingCollege, endingCollege, distanceBetween FROM CollegeDistances where startingCollege='"+SelectedCollege+"'");
+    qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                " FROM STADIUM where TEAM_NAME='"+SelectedTeam+"'");
+
+    if(!qry.exec())
+    {
+        qDebug() <<"error Loading values to db" << endl;
+
+    }
+
+    model->setQuery(qry);
+
+    ui->DistancesTable->setModel(model);
+
+}
+
+//void MainWindow::on_StartingTeamComboBox_currentIndexChanged(const QString &arg1)
+//{
+//    QString SelectedTeam = ui->StartingTeamComboBox->currentText();
+
+//    qDebug() << SelectedTeam;
+
+//    QSqlQueryModel* model = new QSqlQueryModel();
+
+//    QSqlQuery qry;
+//    qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+//                " FROM STADIUM where TEAM_NAME='"+SelectedTeam+"'");
+
+//    if(!qry.exec())
+//    {
+//        qDebug() <<"error Loading values to db" << endl;
+
+//    }
+
+//    model->setQuery(qry);
+
+//    ui->DistancesTable->setModel(model);
+
+//}
+
+// NEW CODE HERE 4/20/2020
+void MainWindow::on_ViewLeagueInfo_clicked()
+{
+    QString National = "National";
+    QString American = "American";
+
+    QSqlQueryModel* model = new QSqlQueryModel();
+
+    QSqlQuery qry;
+
+    if(ui->AmericanLeagueCheckBox->checkState() == Qt::Checked && ui->NationalLeagueCheckBox->checkState() == Qt::Unchecked)
+    {
+        qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                    " FROM STADIUM WHERE LEAGUE = '"+American+"'");
+    }
+    if(ui->AmericanLeagueCheckBox->checkState() == Qt::Unchecked && ui->NationalLeagueCheckBox->checkState() == Qt::Checked)
+    {
+        qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                    " FROM STADIUM WHERE LEAGUE = '"+National+"'");
+    }
+    if(ui->AmericanLeagueCheckBox->checkState() == Qt::Checked && ui->NationalLeagueCheckBox->checkState() == Qt::Checked)
+    {
+        qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                    " FROM STADIUM");
+    }
+
+    if(!qry.exec())
+    {
+        qDebug() <<"error Loading values to db" << endl;
+
+    }
+
+    model->setQuery(qry);
+
+    ui->DistancesTable->setModel(model);
+}
+
+void MainWindow::on_SortingComboBox_currentIndexChanged(const QString &arg1)
+{
+    QString National = "National";
+    QString American = "American";
+    QString Open = "Open";
+
+    QString SortBy = ui->SortingComboBox->currentText();
+
+
+    qDebug() << SortBy;
+
+    QSqlQueryModel* model = new QSqlQueryModel();
+
+    QSqlQuery qry;
+
+    // ONLY AMERICAN LEAGUE INFO
+    if(ui->AmericanLeagueCheckBox->checkState() == Qt::Checked && ui->NationalLeagueCheckBox->checkState() == Qt::Unchecked)
+    {
+        if(SortBy == "Team Name")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+American+"' ORDER BY TEAM_NAME");
+        }
+        if(SortBy == "Stadium Name")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+American+"' ORDER BY STADIUM_NAME");
+        }
+        if(SortBy == "Park Typology")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+American+"' ORDER BY BALLPARK_TYPOLOGY");
+        }
+        if(SortBy == "Open Roof")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+American+"' AND ROOF_TYPE = '"+Open+"' ORDER BY TEAM_NAME");
+        }
+        if(SortBy == "Date Opened")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+American+"' ORDER BY DATE_OPENED");
+        }
+        if(SortBy == "Total Capacity")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+American+"' ORDER BY SEATING_CAP");
+        }
+        if(SortBy == "Center Field Distance (Greatest)")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+American+"' AND CENTER_DISTANCE = (SELECT MAX(CENTER_DISTANCE) FROM STADIUM) ORDER BY TEAM_NAME");
+        }
+        if(SortBy == "Center Field Distance (Smallest)")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+American+"' AND CENTER_DISTANCE = (SELECT MIN(CENTER_DISTANCE) FROM STADIUM) ORDER BY TEAM_NAME");
+        }
+    }
+
+    // ONLY NATIONAL LEAGUE INFO
+    if(ui->AmericanLeagueCheckBox->checkState() == Qt::Unchecked && ui->NationalLeagueCheckBox->checkState() == Qt::Checked)
+    {
+        if(SortBy == "Team Name")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+National+"' ORDER BY TEAM_NAME");
+        }
+        if(SortBy == "Stadium Name")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+National+"' ORDER BY STADIUM_NAME");
+        }
+        if(SortBy == "Park Typology")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+National+"' ORDER BY BALLPARK_TYPOLOGY");
+        }
+        if(SortBy == "Open Roof")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+National+"' AND ROOF_TYPE = '"+Open+"' ORDER BY TEAM_NAME");
+        }
+        if(SortBy == "Date Opened")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+National+"' ORDER BY DATE_OPENED");
+        }
+        if(SortBy == "Total Capacity")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+National+"' ORDER BY SEATING_CAP");
+        }
+        if(SortBy == "Center Field Distance (Greatest)")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+National+"' AND CENTER_DISTANCE = (SELECT MAX(CENTER_DISTANCE) FROM STADIUM) ORDER BY TEAM_NAME");
+        }
+        if(SortBy == "Center Field Distance (Smallest)")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE LEAGUE = '"+National+"' AND CENTER_DISTANCE = (SELECT MIN(CENTER_DISTANCE) FROM STADIUM) ORDER BY TEAM_NAME");
+        }
+    }
+
+    //AMERICAN & NATIONAL LEAGUE INFO
+    if(ui->AmericanLeagueCheckBox->checkState() == Qt::Checked && ui->NationalLeagueCheckBox->checkState() == Qt::Checked)
+    {
+        if(SortBy == "Team Name")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM ORDER BY TEAM_NAME");
+        }
+        if(SortBy == "Stadium Name")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM ORDER BY STADIUM_NAME");
+        }
+        if(SortBy == "Park Typology")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM ORDER BY BALLPARK_TYPOLOGY");
+        }
+        if(SortBy == "Open Roof")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE ROOF_TYPE = '"+Open+"' ORDER BY TEAM_NAME");
+        }
+        if(SortBy == "Date Opened")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM ORDER BY DATE_OPENED");
+        }
+        if(SortBy == "Total Capacity")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE ORDER BY SEATING_CAP");
+        }
+        if(SortBy == "Center Field Distance (Greatest)")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE CENTER_DISTANCE = (SELECT MAX(CENTER_DISTANCE) FROM STADIUM) ORDER BY TEAM_NAME");
+        }
+        if(SortBy == "Center Field Distance (Smallest)")
+        {
+            qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE"
+                        " FROM STADIUM WHERE CENTER_DISTANCE = (SELECT MIN(CENTER_DISTANCE) FROM STADIUM) ORDER BY TEAM_NAME");
+        }
+    }
+
 
     if(!qry.exec())
     {
@@ -299,7 +518,7 @@ void MainWindow::on_backButton_1_clicked()
 
 void MainWindow::on_SelectStartingCollegeButton_3_clicked()
 {
-    ui->StartingPointBox->setModel(databaseObj.loadStartingCollegeList());
+    ui->StartingPointBox->setModel(databaseObj.loadStartingTeam());
     ui->QueueTableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
     Delete_Tour_Data();                         // Deletes TourData table so it can be reused
@@ -562,7 +781,7 @@ void MainWindow::on_backButton_6_clicked()
 
 void MainWindow::on_LoadData_clicked()
 {
-    ui->CollegeSelectBox->setModel(databaseObj.loadStartingCollegeList());
+    ui->CollegeSelectBox->setModel(databaseObj.loadStartingTeam());
     ui->PrePQueueTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
     Delete_Tour_Data();                         // Deletes TourData table so it can be reused
@@ -749,3 +968,7 @@ void MainWindow::on_DepartButton_12_clicked()
     this->totalPrice = 0;   // sets total price equal to 0
     ui->priceLCDNumber->display("0");
 }
+
+
+
+

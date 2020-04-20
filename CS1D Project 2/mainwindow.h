@@ -57,9 +57,15 @@ private slots:
 
     //----------------------------PLANNING PAGE CODE-----------------------------------------//
 
-    void on_SelectStartingCollegeButton_clicked();
+    void on_SelectStartingTeamButton_clicked();
 
-    void on_StartingCollegeComboBox_currentIndexChanged(const QString &arg1);
+//    void on_StartingTeamComboBox_currentIndexChanged(const QString &arg1);
+
+    // NEW CODE HERE 4/20/2020
+
+    void on_ViewLeagueInfo_clicked();
+
+    void on_SortingComboBox_currentIndexChanged(const QString &arg1);
 
     void on_PlanCustomTripButton_clicked();
 

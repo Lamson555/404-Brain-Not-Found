@@ -27,9 +27,9 @@ public:
     *  values, it will output "error loading values to
     *  db". Returns pointer
     *******************************************************/
-    QSqlQueryModel *loadCampusInfo();
+    QSqlQueryModel *loadStadiumInfo();
     QSqlQueryModel *loadSouvenirs();
-    QSqlQueryModel *loadStartingCollegeList();
+    QSqlQueryModel *loadStartingTeam();
     QSqlQueryModel *loadTourQueueData();
     QSqlQueryModel *loadNextDestination();
 

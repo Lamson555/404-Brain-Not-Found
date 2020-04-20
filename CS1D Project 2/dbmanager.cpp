@@ -4,7 +4,7 @@ DBManager::DBManager()
 {
     // Connecting to database
     m_database = QSqlDatabase::addDatabase("QSQLITE");
-    m_database.setDatabaseName("CS1DProject1.db");
+    m_database.setDatabaseName("D:/GitHub/404-Brain-Not-Found/CS1D Project 2/CS1DProject2.db");
 
     if(!m_database.open())
     {
@@ -26,16 +26,13 @@ DBManager::~DBManager(){}
 *  values, it will output "error loading values to
 *  db". Returns pointer
 *******************************************************/
-QSqlQueryModel *DBManager::loadCampusInfo()
+QSqlQueryModel *DBManager::loadStadiumInfo()
 {
-    QString Saddleback = "Saddleback College";
-
-    qDebug() << Saddleback;
 
     QSqlQueryModel* model = new QSqlQueryModel();
 
     QSqlQuery qry;
-    qry.prepare("SELECT startingCollege, endingCollege, distanceBetween FROM CollegeDistances where startingCollege='"+Saddleback+"'");
+    qry.prepare("SELECT TEAM_NAME, STADIUM_NAME, LOCATION FROM STADIUM");
 
     if(!qry.exec())
     {
@@ -52,7 +49,7 @@ QSqlQueryModel *DBManager::loadSouvenirs()
     QSqlQueryModel* model = new QSqlQueryModel();
 
     QSqlQuery qry;
-    qry.prepare("SELECT college, traditionalSouvenirs, cost FROM Souvenirs");
+    qry.prepare("SELECT STADIUM_NAME, SEATING_CAP, LOCATION, SURFACE, TEAM_NAME, LEAGUE, DATE_OPENED, CENTER_DISTANCE, BALLPARK_TYPOLOGY, ROOF_TYPE FROM SOUVENIRS");
 
     if(!qry.exec())
     {
@@ -64,12 +61,12 @@ QSqlQueryModel *DBManager::loadSouvenirs()
     return model;
 }
 
-QSqlQueryModel *DBManager::loadStartingCollegeList()
+QSqlQueryModel *DBManager:: loadStartingTeam()
 {
     QSqlQueryModel* model = new QSqlQueryModel();
 
     QSqlQuery qry;
-    qry.prepare("SELECT DISTINCT startingCollege FROM CollegeDistances");
+    qry.prepare("SELECT TEAM_NAME FROM STADIUM");
 
     if(!qry.exec())
     {

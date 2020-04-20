@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
@@ -59,9 +60,14 @@ public:
     QTableView *DistancesTable;
     QWidget *layoutWidget_8;
     QVBoxLayout *verticalLayout_6;
-    QPushButton *SelectStartingCollegeButton;
     QLabel *label_4;
-    QComboBox *StartingCollegeComboBox;
+    QComboBox *StartingTeamComboBox;
+    QPushButton *SelectStartingTeamButton;
+    QCheckBox *AmericanLeagueCheckBox;
+    QCheckBox *NationalLeagueCheckBox;
+    QPushButton *ViewLeagueInfo;
+    QLabel *label_6;
+    QComboBox *SortingComboBox;
     QPushButton *PlanCustomTripButton;
     QPushButton *PrePlannedButton;
     QPushButton *backButton_1;
@@ -137,12 +143,12 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(872, 600);
+        MainWindow->resize(1466, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         stackedWidget = new QStackedWidget(centralwidget);
         stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
-        stackedWidget->setGeometry(QRect(0, 0, 871, 601));
+        stackedWidget->setGeometry(QRect(0, 0, 1461, 601));
         MainMenu = new QWidget();
         MainMenu->setObjectName(QString::fromUtf8("MainMenu"));
         layoutWidget = new QWidget(MainMenu);
@@ -248,7 +254,7 @@ public:
         PlanningMenu->setObjectName(QString::fromUtf8("PlanningMenu"));
         layoutWidget_7 = new QWidget(PlanningMenu);
         layoutWidget_7->setObjectName(QString::fromUtf8("layoutWidget_7"));
-        layoutWidget_7->setGeometry(QRect(30, 60, 511, 481));
+        layoutWidget_7->setGeometry(QRect(30, 60, 1201, 481));
         verticalLayout_5 = new QVBoxLayout(layoutWidget_7);
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         verticalLayout_5->setContentsMargins(0, 0, 0, 0);
@@ -266,25 +272,92 @@ public:
 
         layoutWidget_8 = new QWidget(PlanningMenu);
         layoutWidget_8->setObjectName(QString::fromUtf8("layoutWidget_8"));
-        layoutWidget_8->setGeometry(QRect(580, 80, 212, 174));
+        layoutWidget_8->setGeometry(QRect(1240, 60, 212, 352));
         verticalLayout_6 = new QVBoxLayout(layoutWidget_8);
         verticalLayout_6->setObjectName(QString::fromUtf8("verticalLayout_6"));
         verticalLayout_6->setContentsMargins(0, 0, 0, 0);
-        SelectStartingCollegeButton = new QPushButton(layoutWidget_8);
-        SelectStartingCollegeButton->setObjectName(QString::fromUtf8("SelectStartingCollegeButton"));
-
-        verticalLayout_6->addWidget(SelectStartingCollegeButton);
-
         label_4 = new QLabel(layoutWidget_8);
         label_4->setObjectName(QString::fromUtf8("label_4"));
         label_4->setAlignment(Qt::AlignCenter);
 
         verticalLayout_6->addWidget(label_4);
 
-        StartingCollegeComboBox = new QComboBox(layoutWidget_8);
-        StartingCollegeComboBox->setObjectName(QString::fromUtf8("StartingCollegeComboBox"));
+        StartingTeamComboBox = new QComboBox(layoutWidget_8);
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->addItem(QString());
+        StartingTeamComboBox->setObjectName(QString::fromUtf8("StartingTeamComboBox"));
 
-        verticalLayout_6->addWidget(StartingCollegeComboBox);
+        verticalLayout_6->addWidget(StartingTeamComboBox);
+
+        SelectStartingTeamButton = new QPushButton(layoutWidget_8);
+        SelectStartingTeamButton->setObjectName(QString::fromUtf8("SelectStartingTeamButton"));
+
+        verticalLayout_6->addWidget(SelectStartingTeamButton);
+
+        AmericanLeagueCheckBox = new QCheckBox(layoutWidget_8);
+        AmericanLeagueCheckBox->setObjectName(QString::fromUtf8("AmericanLeagueCheckBox"));
+
+        verticalLayout_6->addWidget(AmericanLeagueCheckBox);
+
+        NationalLeagueCheckBox = new QCheckBox(layoutWidget_8);
+        NationalLeagueCheckBox->setObjectName(QString::fromUtf8("NationalLeagueCheckBox"));
+
+        verticalLayout_6->addWidget(NationalLeagueCheckBox);
+
+        ViewLeagueInfo = new QPushButton(layoutWidget_8);
+        ViewLeagueInfo->setObjectName(QString::fromUtf8("ViewLeagueInfo"));
+
+        verticalLayout_6->addWidget(ViewLeagueInfo);
+
+        label_6 = new QLabel(layoutWidget_8);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        QFont font2;
+        font2.setUnderline(true);
+        label_6->setFont(font2);
+        label_6->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_6->addWidget(label_6);
+
+        SortingComboBox = new QComboBox(layoutWidget_8);
+        SortingComboBox->addItem(QString());
+        SortingComboBox->addItem(QString());
+        SortingComboBox->addItem(QString());
+        SortingComboBox->addItem(QString());
+        SortingComboBox->addItem(QString());
+        SortingComboBox->addItem(QString());
+        SortingComboBox->addItem(QString());
+        SortingComboBox->addItem(QString());
+        SortingComboBox->setObjectName(QString::fromUtf8("SortingComboBox"));
+
+        verticalLayout_6->addWidget(SortingComboBox);
 
         PlanCustomTripButton = new QPushButton(layoutWidget_8);
         PlanCustomTripButton->setObjectName(QString::fromUtf8("PlanCustomTripButton"));
@@ -310,9 +383,9 @@ public:
         verticalLayout_12->setContentsMargins(0, 0, 0, 0);
         CurrentQueueLabel = new QLabel(layoutWidget1);
         CurrentQueueLabel->setObjectName(QString::fromUtf8("CurrentQueueLabel"));
-        QFont font2;
-        font2.setPointSize(18);
-        CurrentQueueLabel->setFont(font2);
+        QFont font3;
+        font3.setPointSize(18);
+        CurrentQueueLabel->setFont(font3);
         CurrentQueueLabel->setAlignment(Qt::AlignCenter);
 
         verticalLayout_12->addWidget(CurrentQueueLabel);
@@ -324,13 +397,13 @@ public:
 
         layoutWidget2 = new QWidget(CustomTripMenu);
         layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(10, 70, 351, 148));
+        layoutWidget2->setGeometry(QRect(10, 70, 361, 121));
         verticalLayout_11 = new QVBoxLayout(layoutWidget2);
         verticalLayout_11->setObjectName(QString::fromUtf8("verticalLayout_11"));
         verticalLayout_11->setContentsMargins(0, 0, 0, 0);
         TourPlanningLabel = new QLabel(layoutWidget2);
         TourPlanningLabel->setObjectName(QString::fromUtf8("TourPlanningLabel"));
-        TourPlanningLabel->setFont(font2);
+        TourPlanningLabel->setFont(font3);
         TourPlanningLabel->setAlignment(Qt::AlignCenter);
 
         verticalLayout_11->addWidget(TourPlanningLabel);
@@ -342,9 +415,9 @@ public:
 
         label_3 = new QLabel(layoutWidget2);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        QFont font3;
-        font3.setPointSize(12);
-        label_3->setFont(font3);
+        QFont font4;
+        font4.setPointSize(12);
+        label_3->setFont(font4);
         label_3->setFrameShape(QFrame::Panel);
         label_3->setFrameShadow(QFrame::Plain);
         label_3->setAlignment(Qt::AlignCenter);
@@ -356,7 +429,7 @@ public:
         backButton_2->setGeometry(QRect(10, 10, 71, 32));
         layoutWidget3 = new QWidget(CustomTripMenu);
         layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
-        layoutWidget3->setGeometry(QRect(40, 210, 291, 201));
+        layoutWidget3->setGeometry(QRect(40, 210, 291, 213));
         gridLayout_4 = new QGridLayout(layoutWidget3);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         gridLayout_4->setContentsMargins(0, 0, 0, 0);
@@ -377,7 +450,7 @@ public:
 
         CurrentLabel = new QLabel(layoutWidget3);
         CurrentLabel->setObjectName(QString::fromUtf8("CurrentLabel"));
-        CurrentLabel->setFont(font2);
+        CurrentLabel->setFont(font3);
         CurrentLabel->setAlignment(Qt::AlignCenter);
 
         gridLayout_4->addWidget(CurrentLabel, 0, 0, 1, 1);
@@ -438,14 +511,14 @@ public:
 
         CurrentLabel_20 = new QLabel(layoutWidget_23);
         CurrentLabel_20->setObjectName(QString::fromUtf8("CurrentLabel_20"));
-        CurrentLabel_20->setFont(font2);
+        CurrentLabel_20->setFont(font3);
         CurrentLabel_20->setAlignment(Qt::AlignCenter);
 
         gridLayout_15->addWidget(CurrentLabel_20, 2, 0, 1, 1);
 
         SelectCollegeCampusLabel = new QLabel(layoutWidget_23);
         SelectCollegeCampusLabel->setObjectName(QString::fromUtf8("SelectCollegeCampusLabel"));
-        SelectCollegeCampusLabel->setFont(font2);
+        SelectCollegeCampusLabel->setFont(font3);
         SelectCollegeCampusLabel->setAlignment(Qt::AlignCenter);
 
         gridLayout_15->addWidget(SelectCollegeCampusLabel, 0, 0, 1, 2);
@@ -489,7 +562,7 @@ public:
         verticalLayout_44->setContentsMargins(0, 0, 0, 0);
         PrePlannedLabel = new QLabel(layoutWidget_22);
         PrePlannedLabel->setObjectName(QString::fromUtf8("PrePlannedLabel"));
-        PrePlannedLabel->setFont(font2);
+        PrePlannedLabel->setFont(font3);
         PrePlannedLabel->setAlignment(Qt::AlignCenter);
 
         verticalLayout_44->addWidget(PrePlannedLabel);
@@ -501,7 +574,7 @@ public:
 
         label_20 = new QLabel(layoutWidget_22);
         label_20->setObjectName(QString::fromUtf8("label_20"));
-        label_20->setFont(font3);
+        label_20->setFont(font4);
         label_20->setFrameShape(QFrame::Panel);
         label_20->setFrameShadow(QFrame::Plain);
         label_20->setAlignment(Qt::AlignCenter);
@@ -510,7 +583,7 @@ public:
 
         label_21 = new QLabel(layoutWidget_22);
         label_21->setObjectName(QString::fromUtf8("label_21"));
-        label_21->setFont(font3);
+        label_21->setFont(font4);
         label_21->setFrameShape(QFrame::Panel);
         label_21->setFrameShadow(QFrame::Plain);
         label_21->setAlignment(Qt::AlignCenter);
@@ -525,7 +598,7 @@ public:
         verticalLayout_45->setContentsMargins(0, 0, 0, 0);
         CurrentQueueLabel_12 = new QLabel(layoutWidget_20);
         CurrentQueueLabel_12->setObjectName(QString::fromUtf8("CurrentQueueLabel_12"));
-        CurrentQueueLabel_12->setFont(font2);
+        CurrentQueueLabel_12->setFont(font3);
         CurrentQueueLabel_12->setAlignment(Qt::AlignCenter);
 
         verticalLayout_45->addWidget(CurrentQueueLabel_12);
@@ -602,11 +675,11 @@ public:
         collegeNameLabel = new QLabel(CampusPage);
         collegeNameLabel->setObjectName(QString::fromUtf8("collegeNameLabel"));
         collegeNameLabel->setGeometry(QRect(91, 21, 371, 19));
-        QFont font4;
-        font4.setPointSize(12);
-        font4.setBold(true);
-        font4.setWeight(75);
-        collegeNameLabel->setFont(font4);
+        QFont font5;
+        font5.setPointSize(12);
+        font5.setBold(true);
+        font5.setWeight(75);
+        collegeNameLabel->setFont(font5);
         collegePicturesLabel = new QLabel(CampusPage);
         collegePicturesLabel->setObjectName(QString::fromUtf8("collegePicturesLabel"));
         collegePicturesLabel->setGeometry(QRect(91, 49, 391, 201));
@@ -619,9 +692,9 @@ public:
         collegeDescriptionTextBrowser = new QTextBrowser(CampusPage);
         collegeDescriptionTextBrowser->setObjectName(QString::fromUtf8("collegeDescriptionTextBrowser"));
         collegeDescriptionTextBrowser->setGeometry(QRect(530, 60, 321, 341));
-        QFont font5;
-        font5.setPointSize(11);
-        collegeDescriptionTextBrowser->setFont(font5);
+        QFont font6;
+        font6.setPointSize(11);
+        collegeDescriptionTextBrowser->setFont(font6);
         label_7 = new QLabel(CampusPage);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(350, 550, 51, 20));
@@ -635,7 +708,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(4);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -654,9 +727,53 @@ public:
         clearPushBtn_2->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
         MainWindowLogo->setText(QString());
         label->setText(QCoreApplication::translate("MainWindow", "Take me out to the Ball Game !", nullptr));
-        label_5->setText(QCoreApplication::translate("MainWindow", "DISTANCE BY STADIUM", nullptr));
-        SelectStartingCollegeButton->setText(QCoreApplication::translate("MainWindow", "Load Data", nullptr));
-        label_4->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" text-decoration: underline;\">Select Stadium to View</span></p><p><br/></p></body></html>", nullptr));
+        label_5->setText(QCoreApplication::translate("MainWindow", "STADIUM INFORMATION", nullptr));
+        label_4->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" text-decoration: underline;\">Select Team to View</span></p><p><br/></p></body></html>", nullptr));
+        StartingTeamComboBox->setItemText(0, QCoreApplication::translate("MainWindow", "Arizona Diamondbacks", nullptr));
+        StartingTeamComboBox->setItemText(1, QCoreApplication::translate("MainWindow", "Atlanta Braves", nullptr));
+        StartingTeamComboBox->setItemText(2, QCoreApplication::translate("MainWindow", "Baltimore Orioles", nullptr));
+        StartingTeamComboBox->setItemText(3, QCoreApplication::translate("MainWindow", "Boston Red Sox ", nullptr));
+        StartingTeamComboBox->setItemText(4, QCoreApplication::translate("MainWindow", "Chicago Cubs", nullptr));
+        StartingTeamComboBox->setItemText(5, QCoreApplication::translate("MainWindow", "Chicago White Sox", nullptr));
+        StartingTeamComboBox->setItemText(6, QCoreApplication::translate("MainWindow", "Cincinnati Reds", nullptr));
+        StartingTeamComboBox->setItemText(7, QCoreApplication::translate("MainWindow", "Cleveland Indians", nullptr));
+        StartingTeamComboBox->setItemText(8, QCoreApplication::translate("MainWindow", "Colorado Rockies", nullptr));
+        StartingTeamComboBox->setItemText(9, QCoreApplication::translate("MainWindow", "Detroit Tigers", nullptr));
+        StartingTeamComboBox->setItemText(10, QCoreApplication::translate("MainWindow", "Houston Astros", nullptr));
+        StartingTeamComboBox->setItemText(11, QCoreApplication::translate("MainWindow", "Kansas City Royals", nullptr));
+        StartingTeamComboBox->setItemText(12, QCoreApplication::translate("MainWindow", "Los Angeles Angels", nullptr));
+        StartingTeamComboBox->setItemText(13, QCoreApplication::translate("MainWindow", "Los Angeles Dodgers ", nullptr));
+        StartingTeamComboBox->setItemText(14, QCoreApplication::translate("MainWindow", "Miami Marlins", nullptr));
+        StartingTeamComboBox->setItemText(15, QCoreApplication::translate("MainWindow", "Milwaukee Brewers", nullptr));
+        StartingTeamComboBox->setItemText(16, QCoreApplication::translate("MainWindow", "Minnesota Twins", nullptr));
+        StartingTeamComboBox->setItemText(17, QCoreApplication::translate("MainWindow", "New York Mets", nullptr));
+        StartingTeamComboBox->setItemText(18, QCoreApplication::translate("MainWindow", "New York Yankees", nullptr));
+        StartingTeamComboBox->setItemText(19, QCoreApplication::translate("MainWindow", "Oakland Athletics", nullptr));
+        StartingTeamComboBox->setItemText(20, QCoreApplication::translate("MainWindow", "Philadelphia Phillies", nullptr));
+        StartingTeamComboBox->setItemText(21, QCoreApplication::translate("MainWindow", "Pittsburgh Pirates", nullptr));
+        StartingTeamComboBox->setItemText(22, QCoreApplication::translate("MainWindow", "San Diego Padres", nullptr));
+        StartingTeamComboBox->setItemText(23, QCoreApplication::translate("MainWindow", "San Francisco Giants", nullptr));
+        StartingTeamComboBox->setItemText(24, QCoreApplication::translate("MainWindow", "Seattle Mariners", nullptr));
+        StartingTeamComboBox->setItemText(25, QCoreApplication::translate("MainWindow", "St. Louis Cardinals", nullptr));
+        StartingTeamComboBox->setItemText(26, QCoreApplication::translate("MainWindow", "Tampa Bay Rays", nullptr));
+        StartingTeamComboBox->setItemText(27, QCoreApplication::translate("MainWindow", "Texas Rangers", nullptr));
+        StartingTeamComboBox->setItemText(28, QCoreApplication::translate("MainWindow", "Toronto Blue Jays", nullptr));
+        StartingTeamComboBox->setItemText(29, QCoreApplication::translate("MainWindow", "Washington Nationals", nullptr));
+
+        SelectStartingTeamButton->setText(QCoreApplication::translate("MainWindow", "View Team", nullptr));
+        AmericanLeagueCheckBox->setText(QCoreApplication::translate("MainWindow", "American League", nullptr));
+        NationalLeagueCheckBox->setText(QCoreApplication::translate("MainWindow", "National League ", nullptr));
+        ViewLeagueInfo->setText(QCoreApplication::translate("MainWindow", "View League Info", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "Sort By", nullptr));
+        SortingComboBox->setItemText(0, QCoreApplication::translate("MainWindow", "Team Name", nullptr));
+        SortingComboBox->setItemText(1, QCoreApplication::translate("MainWindow", "Stadium Name", nullptr));
+        SortingComboBox->setItemText(2, QCoreApplication::translate("MainWindow", "Park Typology", nullptr));
+        SortingComboBox->setItemText(3, QCoreApplication::translate("MainWindow", "Open Roof", nullptr));
+        SortingComboBox->setItemText(4, QCoreApplication::translate("MainWindow", "Date Opened", nullptr));
+        SortingComboBox->setItemText(5, QCoreApplication::translate("MainWindow", "Total Capacity", nullptr));
+        SortingComboBox->setItemText(6, QCoreApplication::translate("MainWindow", "Center Field Distance (Greatest)", nullptr));
+        SortingComboBox->setItemText(7, QCoreApplication::translate("MainWindow", "Center Field Distance (Smallest)", nullptr));
+
         PlanCustomTripButton->setText(QCoreApplication::translate("MainWindow", "Custom Trip", nullptr));
         PrePlannedButton->setText(QCoreApplication::translate("MainWindow", "Pre-Planned Trip", nullptr));
         backButton_1->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
