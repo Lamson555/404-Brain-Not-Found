@@ -28,7 +28,7 @@ public:
     QString GetPicturePath(QString collegeName);
 
     // Gets college's description
-    QString GetCollegeDescription(QString collegeName);
+    QString GetStadiumDescription(QString collegeName);
 
 
 private slots:
@@ -76,7 +76,7 @@ private slots:
 
     //----------------------------CUSTOM TOUR PAGE CODE-----------------------------------------//
 
-    void on_SelectStartingCollegeButton_3_clicked();
+    void on_SelectCustomStadiumButton_clicked();
 
     void on_AddQueueButton_clicked();
 
@@ -89,10 +89,10 @@ private slots:
     void on_SortQueue_clicked();
 
     // Delete_Tour_Data() - Will clear everything from TourData table
-    void Delete_Tour_Data();
+    void Delete_Trip_Data();
 
     // DeleteAlreadyVisitedTable() - Will clear everything from AlreadyVisitedTable
-    void DeleteAlreadyVisitedCollegesTable();
+    void DeleteVisited_StadiumsTable();
 
     // DepartButton() - Will officially start the trip
     void on_DepartButton_clicked();
@@ -101,17 +101,17 @@ private slots:
 
     void on_backButton_7_clicked();
 
-    // loads souvenirComboBox with souvenirs corresponding to the college
+    // loads souvenirComboBox with souvenirs corresponding to the stadium
     void on_loadSouvenirButton_clicked();
 
-    // enables one to purchase chosen souvenir at a given college
+    // enables one to purchase chosen souvenir at a given stadium
     void on_purchaseSouvenirsButton_clicked();
 
     // If user clicks delete while purchasing souvenirs, will modify currentPrice and totalPrice
     void on_deleteSouvenirsButton_clicked();
 
-    // Will go to next college during the tour trip
-    void on_nextCollegeButton_clicked();
+    // Will go to next stadium during the tour trip
+    void on_nextStadiumButton_clicked();
 
     //-----------------------------PRE PLANNED TOUR PAGE CODE-----------------------------------------//
 
@@ -127,11 +127,11 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QVector<QString> selectedCollegesVector;    // vector to store selected colleges
+    QVector<QString> selectedStadiumsVector;    // vector to store selected Stadiums
     Admin adminObj;                             // represents adminObj of class: Admin
     DBManager databaseObj;
     double totalPrice;                          // total price from trip
-    double currentPrice;                        // current price from each college trip
+    double currentPrice;                        // current price from each stadium trip
 
 
 protected:

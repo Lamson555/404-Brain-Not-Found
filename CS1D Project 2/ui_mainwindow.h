@@ -79,7 +79,7 @@ public:
     QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_11;
     QLabel *TourPlanningLabel;
-    QPushButton *SelectStartingCollegeButton_3;
+    QPushButton *SelectCustomStadiumButton;
     QLabel *label_3;
     QPushButton *backButton_2;
     QWidget *layoutWidget3;
@@ -98,7 +98,7 @@ public:
     QWidget *PrePlannedMenu;
     QWidget *layoutWidget_23;
     QGridLayout *gridLayout_15;
-    QComboBox *CollegeSelectBox;
+    QComboBox *StadiumSelectBox;
     QLabel *CurrentLabel_20;
     QLabel *SelectCollegeCampusLabel;
     QComboBox *DesiredAmtBox;
@@ -120,7 +120,7 @@ public:
     QPushButton *DepartButton_12;
     QLabel *DistanceLabel_12;
     QLCDNumber *DistanceLCDctr;
-    QWidget *CampusPage;
+    QWidget *StadiumPage;
     QTableView *souvenirTableView;
     QPushButton *backButton_7;
     QWidget *layoutWidget5;
@@ -131,11 +131,11 @@ public:
     QPushButton *deleteSouvenirsButton;
     QWidget *layoutWidget6;
     QVBoxLayout *verticalLayout_4;
-    QLabel *collegeNameLabel;
-    QLabel *collegePicturesLabel;
+    QLabel *StadiumNameLabel;
+    QLabel *StadiumPicturesLabel;
     QLabel *label_8;
-    QPushButton *nextCollegeButton;
-    QTextBrowser *collegeDescriptionTextBrowser;
+    QPushButton *nextStadiumButton;
+    QTextBrowser *StadiumDescriptionTextBrowser;
     QLabel *label_7;
     QLCDNumber *priceLCDNumber;
 
@@ -397,7 +397,7 @@ public:
 
         layoutWidget2 = new QWidget(CustomTripMenu);
         layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(10, 70, 361, 121));
+        layoutWidget2->setGeometry(QRect(10, 70, 361, 91));
         verticalLayout_11 = new QVBoxLayout(layoutWidget2);
         verticalLayout_11->setObjectName(QString::fromUtf8("verticalLayout_11"));
         verticalLayout_11->setContentsMargins(0, 0, 0, 0);
@@ -408,10 +408,10 @@ public:
 
         verticalLayout_11->addWidget(TourPlanningLabel);
 
-        SelectStartingCollegeButton_3 = new QPushButton(layoutWidget2);
-        SelectStartingCollegeButton_3->setObjectName(QString::fromUtf8("SelectStartingCollegeButton_3"));
+        SelectCustomStadiumButton = new QPushButton(layoutWidget2);
+        SelectCustomStadiumButton->setObjectName(QString::fromUtf8("SelectCustomStadiumButton"));
 
-        verticalLayout_11->addWidget(SelectStartingCollegeButton_3);
+        verticalLayout_11->addWidget(SelectCustomStadiumButton);
 
         label_3 = new QLabel(layoutWidget2);
         label_3->setObjectName(QString::fromUtf8("label_3"));
@@ -504,10 +504,10 @@ public:
         gridLayout_15 = new QGridLayout(layoutWidget_23);
         gridLayout_15->setObjectName(QString::fromUtf8("gridLayout_15"));
         gridLayout_15->setContentsMargins(0, 0, 0, 0);
-        CollegeSelectBox = new QComboBox(layoutWidget_23);
-        CollegeSelectBox->setObjectName(QString::fromUtf8("CollegeSelectBox"));
+        StadiumSelectBox = new QComboBox(layoutWidget_23);
+        StadiumSelectBox->setObjectName(QString::fromUtf8("StadiumSelectBox"));
 
-        gridLayout_15->addWidget(CollegeSelectBox, 1, 0, 1, 2);
+        gridLayout_15->addWidget(StadiumSelectBox, 1, 0, 1, 2);
 
         CurrentLabel_20 = new QLabel(layoutWidget_23);
         CurrentLabel_20->setObjectName(QString::fromUtf8("CurrentLabel_20"));
@@ -632,15 +632,15 @@ public:
         verticalLayout_46->addWidget(DistanceLCDctr);
 
         stackedWidget->addWidget(PrePlannedMenu);
-        CampusPage = new QWidget();
-        CampusPage->setObjectName(QString::fromUtf8("CampusPage"));
-        souvenirTableView = new QTableView(CampusPage);
+        StadiumPage = new QWidget();
+        StadiumPage->setObjectName(QString::fromUtf8("StadiumPage"));
+        souvenirTableView = new QTableView(StadiumPage);
         souvenirTableView->setObjectName(QString::fromUtf8("souvenirTableView"));
         souvenirTableView->setGeometry(QRect(10, 280, 321, 271));
-        backButton_7 = new QPushButton(CampusPage);
+        backButton_7 = new QPushButton(StadiumPage);
         backButton_7->setObjectName(QString::fromUtf8("backButton_7"));
         backButton_7->setGeometry(QRect(10, 10, 71, 32));
-        layoutWidget5 = new QWidget(CampusPage);
+        layoutWidget5 = new QWidget(StadiumPage);
         layoutWidget5->setObjectName(QString::fromUtf8("layoutWidget5"));
         layoutWidget5->setGeometry(QRect(350, 310, 151, 174));
         verticalLayout_3 = new QVBoxLayout(layoutWidget5);
@@ -666,49 +666,49 @@ public:
 
         verticalLayout_3->addWidget(deleteSouvenirsButton);
 
-        layoutWidget6 = new QWidget(CampusPage);
+        layoutWidget6 = new QWidget(StadiumPage);
         layoutWidget6->setObjectName(QString::fromUtf8("layoutWidget6"));
         layoutWidget6->setGeometry(QRect(570, 430, 265, 59));
         verticalLayout_4 = new QVBoxLayout(layoutWidget6);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
-        collegeNameLabel = new QLabel(CampusPage);
-        collegeNameLabel->setObjectName(QString::fromUtf8("collegeNameLabel"));
-        collegeNameLabel->setGeometry(QRect(91, 21, 371, 19));
+        StadiumNameLabel = new QLabel(StadiumPage);
+        StadiumNameLabel->setObjectName(QString::fromUtf8("StadiumNameLabel"));
+        StadiumNameLabel->setGeometry(QRect(91, 21, 371, 19));
         QFont font5;
         font5.setPointSize(12);
         font5.setBold(true);
         font5.setWeight(75);
-        collegeNameLabel->setFont(font5);
-        collegePicturesLabel = new QLabel(CampusPage);
-        collegePicturesLabel->setObjectName(QString::fromUtf8("collegePicturesLabel"));
-        collegePicturesLabel->setGeometry(QRect(91, 49, 391, 201));
-        label_8 = new QLabel(CampusPage);
+        StadiumNameLabel->setFont(font5);
+        StadiumPicturesLabel = new QLabel(StadiumPage);
+        StadiumPicturesLabel->setObjectName(QString::fromUtf8("StadiumPicturesLabel"));
+        StadiumPicturesLabel->setGeometry(QRect(91, 49, 391, 201));
+        label_8 = new QLabel(StadiumPage);
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setGeometry(QRect(570, 430, 263, 28));
-        nextCollegeButton = new QPushButton(CampusPage);
-        nextCollegeButton->setObjectName(QString::fromUtf8("nextCollegeButton"));
-        nextCollegeButton->setGeometry(QRect(570, 464, 263, 23));
-        collegeDescriptionTextBrowser = new QTextBrowser(CampusPage);
-        collegeDescriptionTextBrowser->setObjectName(QString::fromUtf8("collegeDescriptionTextBrowser"));
-        collegeDescriptionTextBrowser->setGeometry(QRect(530, 60, 321, 341));
+        nextStadiumButton = new QPushButton(StadiumPage);
+        nextStadiumButton->setObjectName(QString::fromUtf8("nextStadiumButton"));
+        nextStadiumButton->setGeometry(QRect(570, 464, 263, 23));
+        StadiumDescriptionTextBrowser = new QTextBrowser(StadiumPage);
+        StadiumDescriptionTextBrowser->setObjectName(QString::fromUtf8("StadiumDescriptionTextBrowser"));
+        StadiumDescriptionTextBrowser->setGeometry(QRect(530, 60, 321, 341));
         QFont font6;
         font6.setPointSize(11);
-        collegeDescriptionTextBrowser->setFont(font6);
-        label_7 = new QLabel(CampusPage);
+        StadiumDescriptionTextBrowser->setFont(font6);
+        label_7 = new QLabel(StadiumPage);
         label_7->setObjectName(QString::fromUtf8("label_7"));
         label_7->setGeometry(QRect(350, 550, 51, 20));
         label_7->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        priceLCDNumber = new QLCDNumber(CampusPage);
+        priceLCDNumber = new QLCDNumber(StadiumPage);
         priceLCDNumber->setObjectName(QString::fromUtf8("priceLCDNumber"));
         priceLCDNumber->setGeometry(QRect(429, 531, 151, 49));
         priceLCDNumber->setDigitCount(7);
-        stackedWidget->addWidget(CampusPage);
+        stackedWidget->addWidget(StadiumPage);
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -779,7 +779,7 @@ public:
         backButton_1->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         CurrentQueueLabel->setText(QCoreApplication::translate("MainWindow", "Current Queue", nullptr));
         TourPlanningLabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" text-decoration: underline;\">Custom Trip</span></p><p><br/></p></body></html>", nullptr));
-        SelectStartingCollegeButton_3->setText(QCoreApplication::translate("MainWindow", "Load Data", nullptr));
+        SelectCustomStadiumButton->setText(QCoreApplication::translate("MainWindow", "Load Data", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:10pt; font-style:italic;\">&quot;Plan your custom trip from point A to point B all in one!&quot;</span></p></body></html>", nullptr));
         backButton_2->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         AddQueueButton->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
@@ -818,10 +818,10 @@ public:
         loadSouvenirButton->setText(QCoreApplication::translate("MainWindow", "Load Data", nullptr));
         purchaseSouvenirsButton->setText(QCoreApplication::translate("MainWindow", "Purchase", nullptr));
         deleteSouvenirsButton->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
-        collegeNameLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        collegePicturesLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        StadiumNameLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        StadiumPicturesLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "Move on to next Stadium", nullptr));
-        nextCollegeButton->setText(QCoreApplication::translate("MainWindow", "Next", nullptr));
+        nextStadiumButton->setText(QCoreApplication::translate("MainWindow", "Next", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "Total: ", nullptr));
     } // retranslateUi
 

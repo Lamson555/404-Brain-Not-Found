@@ -112,8 +112,8 @@ QSqlQueryModel *DBManager::loadNextDestination()
     return model;
 }
 
-// loadAlreadyVisitedCollegesTable() - Returns a QSqlQueryModel consisting of information from AlreadyVisitedColleges table
-QSqlQueryModel *DBManager::loadAlreadyVisitedCollegesTable()
+// loadVISITED_STADIUMSTable() - Returns a QSqlQueryModel consisting of information from AlreadyVisitedColleges table
+QSqlQueryModel *DBManager::loadVISITED_STADIUMSTable()
 {
     QSqlQueryModel* model = new QSqlQueryModel();
 
@@ -130,7 +130,7 @@ QSqlQueryModel *DBManager::loadAlreadyVisitedCollegesTable()
     return model;
 }
 
-QSqlQueryModel *DBManager::LoadSouvenirsByCollege(QString collegeName, bool souvenirsOnly)
+QSqlQueryModel *DBManager::LoadSouvenirsByStadium(QString collegeName, bool souvenirsOnly)
 {
     QSqlQueryModel* model = new QSqlQueryModel();
 
@@ -153,13 +153,13 @@ QSqlQueryModel *DBManager::LoadSouvenirsByCollege(QString collegeName, bool souv
     return model;
 }
 
-    // GetSouvenirPrice() - Returns price of the corresponding item at a given college
-double DBManager::GetSouvenirPrice(QString collegeName, QString itemName)
+    // GetSouvenirPrice() - Returns price of the corresponding item at a given stadium name
+double DBManager::GetSouvenirPrice(QString STADIUM_NAME, QString itemName)
 {
     double price;
     QSqlQuery qry;
 
-    qry.prepare("select printf(\"%.2f\", sum(cost)) as \"Price\" from Souvenirs where college = '"+collegeName+"' "
+    qry.prepare("select printf(\"%.2f\", sum(cost)) as \"Price\" from Souvenirs where STADIUM_NAME = '"+STADIUM_NAME+"' "
                 "and traditionalSouvenirs = '"+itemName+"';");
 
     if(!qry.exec())

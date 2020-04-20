@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="MainMenu">
      <widget class="QWidget" name="layoutWidget">
@@ -535,7 +535,7 @@
         <x>10</x>
         <y>70</y>
         <width>361</width>
-        <height>121</height>
+        <height>91</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -555,7 +555,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="SelectStartingCollegeButton_3">
+        <widget class="QPushButton" name="SelectCustomStadiumButton">
          <property name="text">
           <string>Load Data</string>
          </property>
@@ -716,7 +716,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_15">
        <item row="1" column="0" colspan="2">
-        <widget class="QComboBox" name="CollegeSelectBox"/>
+        <widget class="QComboBox" name="StadiumSelectBox"/>
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="CurrentLabel_20">
@@ -989,7 +989,7 @@
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="CampusPage">
+    <widget class="QWidget" name="StadiumPage">
      <widget class="QTableView" name="souvenirTableView">
       <property name="geometry">
        <rect>
@@ -1060,7 +1060,7 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4"/>
      </widget>
-     <widget class="QLabel" name="collegeNameLabel">
+     <widget class="QLabel" name="StadiumNameLabel">
       <property name="geometry">
        <rect>
         <x>91</x>
@@ -1080,7 +1080,7 @@
        <string>TextLabel</string>
       </property>
      </widget>
-     <widget class="QLabel" name="collegePicturesLabel">
+     <widget class="QLabel" name="StadiumPicturesLabel">
       <property name="geometry">
        <rect>
         <x>91</x>
@@ -1106,7 +1106,7 @@
        <string>Move on to next Stadium</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="nextCollegeButton">
+     <widget class="QPushButton" name="nextStadiumButton">
       <property name="geometry">
        <rect>
         <x>570</x>
@@ -1119,7 +1119,7 @@
        <string>Next</string>
       </property>
      </widget>
-     <widget class="QTextBrowser" name="collegeDescriptionTextBrowser">
+     <widget class="QTextBrowser" name="StadiumDescriptionTextBrowser">
       <property name="geometry">
        <rect>
         <x>530</x>

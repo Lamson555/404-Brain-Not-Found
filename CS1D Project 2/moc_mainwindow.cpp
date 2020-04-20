@@ -78,7 +78,7 @@ QT_MOC_LITERAL(30, 774, 26) // "on_DepartButton_12_clicked"
     "on_AddQueueButton_clicked\0"
     "on_DeleteQueueButton_clicked\0"
     "on_backButton_2_clicked\0on_SortQueue_clicked\0"
-    "Delete_Tour_Data\0DeleteAlreadyVisitedCollegesTable\0"
+    "Delete_Tour_Data\0DeleteVisited_StadiumsTable\0"
     "on_DepartButton_clicked\0on_backButton_7_clicked\0"
     "on_loadSouvenirButton_clicked\0"
     "on_purchaseSouvenirsButton_clicked\0"
@@ -188,7 +188,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 13: _t->on_backButton_2_clicked(); break;
         case 14: _t->on_SortQueue_clicked(); break;
         case 15: _t->Delete_Tour_Data(); break;
-        case 16: _t->DeleteAlreadyVisitedCollegesTable(); break;
+        case 16: _t->DeleteVisited_StadiumsTable(); break;
         case 17: _t->on_DepartButton_clicked(); break;
         case 18: _t->on_backButton_7_clicked(); break;
         case 19: _t->on_loadSouvenirButton_clicked(); break;

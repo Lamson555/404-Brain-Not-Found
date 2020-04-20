@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[32];
-    char stringdata0[816];
+    char stringdata0[806];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -46,24 +46,24 @@ QT_MOC_LITERAL(10, 243, 4), // "arg1"
 QT_MOC_LITERAL(11, 248, 31), // "on_PlanCustomTripButton_clicked"
 QT_MOC_LITERAL(12, 280, 27), // "on_PrePlannedButton_clicked"
 QT_MOC_LITERAL(13, 308, 23), // "on_backButton_1_clicked"
-QT_MOC_LITERAL(14, 332, 40), // "on_SelectStartingCollegeButto..."
-QT_MOC_LITERAL(15, 373, 25), // "on_AddQueueButton_clicked"
-QT_MOC_LITERAL(16, 399, 28), // "on_DeleteQueueButton_clicked"
-QT_MOC_LITERAL(17, 428, 23), // "on_backButton_2_clicked"
-QT_MOC_LITERAL(18, 452, 20), // "on_SortQueue_clicked"
-QT_MOC_LITERAL(19, 473, 16), // "Delete_Tour_Data"
-QT_MOC_LITERAL(20, 490, 33), // "DeleteAlreadyVisitedCollegesT..."
-QT_MOC_LITERAL(21, 524, 23), // "on_DepartButton_clicked"
-QT_MOC_LITERAL(22, 548, 23), // "on_backButton_7_clicked"
-QT_MOC_LITERAL(23, 572, 29), // "on_loadSouvenirButton_clicked"
-QT_MOC_LITERAL(24, 602, 34), // "on_purchaseSouvenirsButton_cl..."
-QT_MOC_LITERAL(25, 637, 32), // "on_deleteSouvenirsButton_clicked"
-QT_MOC_LITERAL(26, 670, 28), // "on_nextCollegeButton_clicked"
-QT_MOC_LITERAL(27, 699, 23), // "on_backButton_6_clicked"
-QT_MOC_LITERAL(28, 723, 19), // "on_LoadData_clicked"
-QT_MOC_LITERAL(29, 743, 21), // "on_SortAmount_clicked"
-QT_MOC_LITERAL(30, 765, 23), // "on_DeleteButton_clicked"
-QT_MOC_LITERAL(31, 789, 26) // "on_DepartButton_12_clicked"
+QT_MOC_LITERAL(14, 332, 36), // "on_SelectCustomStadiumButton_..."
+QT_MOC_LITERAL(15, 369, 25), // "on_AddQueueButton_clicked"
+QT_MOC_LITERAL(16, 395, 28), // "on_DeleteQueueButton_clicked"
+QT_MOC_LITERAL(17, 424, 23), // "on_backButton_2_clicked"
+QT_MOC_LITERAL(18, 448, 20), // "on_SortQueue_clicked"
+QT_MOC_LITERAL(19, 469, 16), // "Delete_Trip_Data"
+QT_MOC_LITERAL(20, 486, 27), // "DeleteVisited_StadiumsTable"
+QT_MOC_LITERAL(21, 514, 23), // "on_DepartButton_clicked"
+QT_MOC_LITERAL(22, 538, 23), // "on_backButton_7_clicked"
+QT_MOC_LITERAL(23, 562, 29), // "on_loadSouvenirButton_clicked"
+QT_MOC_LITERAL(24, 592, 34), // "on_purchaseSouvenirsButton_cl..."
+QT_MOC_LITERAL(25, 627, 32), // "on_deleteSouvenirsButton_clicked"
+QT_MOC_LITERAL(26, 660, 28), // "on_nextStadiumButton_clicked"
+QT_MOC_LITERAL(27, 689, 23), // "on_backButton_6_clicked"
+QT_MOC_LITERAL(28, 713, 19), // "on_LoadData_clicked"
+QT_MOC_LITERAL(29, 733, 21), // "on_SortAmount_clicked"
+QT_MOC_LITERAL(30, 755, 23), // "on_DeleteButton_clicked"
+QT_MOC_LITERAL(31, 779, 26) // "on_DepartButton_12_clicked"
 
     },
     "MainWindow\0on_loginPushBtn_2_clicked\0"
@@ -77,16 +77,16 @@ QT_MOC_LITERAL(31, 789, 26) // "on_DepartButton_12_clicked"
     "arg1\0on_PlanCustomTripButton_clicked\0"
     "on_PrePlannedButton_clicked\0"
     "on_backButton_1_clicked\0"
-    "on_SelectStartingCollegeButton_3_clicked\0"
+    "on_SelectCustomStadiumButton_clicked\0"
     "on_AddQueueButton_clicked\0"
     "on_DeleteQueueButton_clicked\0"
     "on_backButton_2_clicked\0on_SortQueue_clicked\0"
-    "Delete_Tour_Data\0DeleteAlreadyVisitedCollegesTable\0"
+    "Delete_Trip_Data\0DeleteVisited_StadiumsTable\0"
     "on_DepartButton_clicked\0on_backButton_7_clicked\0"
     "on_loadSouvenirButton_clicked\0"
     "on_purchaseSouvenirsButton_clicked\0"
     "on_deleteSouvenirsButton_clicked\0"
-    "on_nextCollegeButton_clicked\0"
+    "on_nextStadiumButton_clicked\0"
     "on_backButton_6_clicked\0on_LoadData_clicked\0"
     "on_SortAmount_clicked\0on_DeleteButton_clicked\0"
     "on_DepartButton_12_clicked"
@@ -188,19 +188,19 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 8: _t->on_PlanCustomTripButton_clicked(); break;
         case 9: _t->on_PrePlannedButton_clicked(); break;
         case 10: _t->on_backButton_1_clicked(); break;
-        case 11: _t->on_SelectStartingCollegeButton_3_clicked(); break;
+        case 11: _t->on_SelectCustomStadiumButton_clicked(); break;
         case 12: _t->on_AddQueueButton_clicked(); break;
         case 13: _t->on_DeleteQueueButton_clicked(); break;
         case 14: _t->on_backButton_2_clicked(); break;
         case 15: _t->on_SortQueue_clicked(); break;
-        case 16: _t->Delete_Tour_Data(); break;
-        case 17: _t->DeleteAlreadyVisitedCollegesTable(); break;
+        case 16: _t->Delete_Trip_Data(); break;
+        case 17: _t->DeleteVisited_StadiumsTable(); break;
         case 18: _t->on_DepartButton_clicked(); break;
         case 19: _t->on_backButton_7_clicked(); break;
         case 20: _t->on_loadSouvenirButton_clicked(); break;
         case 21: _t->on_purchaseSouvenirsButton_clicked(); break;
         case 22: _t->on_deleteSouvenirsButton_clicked(); break;
-        case 23: _t->on_nextCollegeButton_clicked(); break;
+        case 23: _t->on_nextStadiumButton_clicked(); break;
         case 24: _t->on_backButton_6_clicked(); break;
         case 25: _t->on_LoadData_clicked(); break;
         case 26: _t->on_SortAmount_clicked(); break;

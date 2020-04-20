@@ -33,12 +33,12 @@ public:
     QSqlQueryModel *loadTourQueueData();
     QSqlQueryModel *loadNextDestination();
 
-    // loadAlreadyVisitedCollegesTable() - Returns a QSqlQueryModel consisting of information from AlreadyVisitedColleges table
-    QSqlQueryModel *loadAlreadyVisitedCollegesTable();
+    // loadVISITED_STADIUMSTable() - Returns a QSqlQueryModel consisting of information from AlreadyVisitedColleges table
+    QSqlQueryModel *loadVISITED_STADIUMSTable();
 
-    // LoadSouvenirsByCollege() - Returns a QSqlQueryModel consisting of information from Souvenirs table depending on a college
+    // LoadSouvenirsByStadium() - Returns a QSqlQueryModel consisting of information from Souvenirs table depending on a college
     // Will also pass in bool variable souvenirsOnly if only the souvenirs are necessary
-    QSqlQueryModel *LoadSouvenirsByCollege(QString collegeName, bool souvenirsOnly);
+    QSqlQueryModel *LoadSouvenirsByStadium(QString collegeName, bool souvenirsOnly);
 
     // GetSouvenirPrice() - Returns price of the corresponding item at a given college
     double GetSouvenirPrice(QString collegeName, QString itemName);
